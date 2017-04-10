@@ -8,7 +8,7 @@ ENV JAVA_OPTS="-Xms128m -Xmx512m"
 ADD /atlassian-jira-software-7.3.4-standalone/ /jira-installation
 RUN rm -rf /jira-installation/conf/server.xml
 ADD server.xml /jira-installation/conf/server.xml
-RUN mkdir /jira-installation/work
+#RUN mkdir /jira-installation/work
 
 RUN ./jira-installation/bin/startup.sh
 RUN chmod +x /jira-installation/bin/start-jira.sh
