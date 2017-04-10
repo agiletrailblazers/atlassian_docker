@@ -1,0 +1,234 @@
+2017-04-07 18:02:17,081 JIRA-Bootstrap INFO      [c.a.jira.startup.JiraStartupLogger] 
+    
+    ****************
+    JIRA starting...
+    ****************
+    
+2017-04-07 18:02:17,338 localhost-startStop-1 FATAL      [c.a.jira.startup.JiraStartupLogger] 
+    
+    ****************************************************************************************************************************************************************
+    No jira.home is configured.
+    See https://docs.atlassian.com/jira/jadm-docs-073/Setting+your+JIRA+application+home+directory for instructions on setting jira.home
+    ****************************************************************************************************************************************************************
+    
+2017-04-07 18:02:17,353 JIRA-Bootstrap INFO      [c.a.jira.startup.JiraStartupLogger] 
+    
+    ___ Environment _____________________________
+    
+         JIRA Build                                    : 7.3.4#73015-sha1:a262b3457b3605f12635df4b0a0c3dc71d631a1e
+         Build Date                                    : Wed Mar 29 00:00:00 EDT 2017
+         JIRA Installation Type                        : Standalone
+         Application Server                            : Apache Tomcat/8.5.6 - Servlet API 3.1
+         Java Version                                  : 1.8.0_77 - Oracle Corporation
+         Current Working Directory                     : /Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone/bin
+         Maximum Allowable Memory                      : 683MB
+         Total Memory                                  : 484MB
+         Free Memory                                   : 435MB
+         Used Memory                                   : 49MB
+         Memory Pool: Code Cache                       : Code Cache: init = 2555904(2496K) used = 8559424(8358K) committed = 10354688(10112K) max = 251658240(245760K)
+         Memory Pool: Metaspace                        : Metaspace: init = 0(0K) used = 21625456(21118K) committed = 22413312(21888K) max = -1(-1K)
+         Memory Pool: Compressed Class Space           : Compressed Class Space: init = 0(0K) used = 2512528(2453K) committed = 2752512(2688K) max = 1073741824(1048576K)
+         Memory Pool: PS Eden Space                    : PS Eden Space: init = 100663296(98304K) used = 27352984(26711K) committed = 210763776(205824K) max = 211288064(206336K)
+         Memory Pool: PS Survivor Space                : PS Survivor Space: init = 16777216(16384K) used = 0(0K) committed = 28311552(27648K) max = 28311552(27648K)
+         Memory Pool: PS Old Gen                       : PS Old Gen: init = 268435456(262144K) used = 23655216(23100K) committed = 268435456(262144K) max = 536870912(524288K)
+         JVM Input Arguments                           : -Djava.util.logging.config.file=/Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms384m -Xmx768m -Djava.awt.headless=true -Datlassian.standalone=JIRA -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true -Dmail.mime.decodeparameters=true -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory -XX:+PrintGCDateStamps -XX:-OmitStackTraceInFastThrow -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dcatalina.base=/Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone -Dcatalina.home=/Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone -Djava.io.tmpdir=/Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone/temp
+         Java Compatibility Information                : JIRA version = 7.3.4, Java Version = 1.8.0_77
+    
+    ___ Java System Properties _________________
+    
+         atlassian.standalone                          : JIRA
+         awt.toolkit                                   : sun.lwawt.macosx.LWCToolkit
+         catalina.base                                 : /Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone
+         catalina.home                                 : /Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone
+         catalina.useNaming                            : true
+         common.loader                                 : "${catalina.base}/lib",
+                                                         "${catalina.base}/lib/*.jar",
+                                                         "${catalina.home}/lib",
+                                                         "${catalina.home}/lib/*.jar"
+         file.encoding                                 : UTF-8
+         file.encoding.pkg                             : sun.io
+         ftp.nonProxyHosts                             : local|*.local|169.254/16|*.169.254/16
+         gopherProxySet                                : false
+         http.nonProxyHosts                            : local|*.local|169.254/16|*.169.254/16
+         java.awt.graphicsenv                          : sun.awt.CGraphicsEnvironment
+         java.awt.headless                             : true
+         java.awt.printerjob                           : sun.lwawt.macosx.CPrinterJob
+         java.class.version                            : 52.0
+         java.home                                     : /Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre
+         java.io.tmpdir                                : /Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone/temp
+         java.naming.factory.initial                   : org.apache.naming.java.javaURLContextFactory
+         java.naming.factory.url.pkgs                  : org.apache.naming
+         java.protocol.handler.pkgs                    : org.apache.catalina.webresources
+         java.runtime.name                             : Java(TM) SE Runtime Environment
+         java.runtime.version                          : 1.8.0_77-b03
+         java.specification.name                       : Java Platform API Specification
+         java.specification.vendor                     : Oracle Corporation
+         java.specification.version                    : 1.8
+         java.util.logging.config.file                 : /Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone/conf/logging.properties
+         java.util.logging.manager                     : org.apache.juli.ClassLoaderLogManager
+         java.vendor                                   : Oracle Corporation
+         java.vendor.url                               : http://java.oracle.com/
+         java.vendor.url.bug                           : http://bugreport.sun.com/bugreport/
+         java.version                                  : 1.8.0_77
+         java.vm.info                                  : mixed mode
+         java.vm.name                                  : Java HotSpot(TM) 64-Bit Server VM
+         java.vm.specification.name                    : Java Virtual Machine Specification
+         java.vm.specification.vendor                  : Oracle Corporation
+         java.vm.specification.version                 : 1.8
+         java.vm.vendor                                : Oracle Corporation
+         java.vm.version                               : 25.77-b03
+         jdk.tls.ephemeralDHKeySize                    : 2048
+         mail.mime.decodeparameters                    : true
+         org.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER : true
+         org.dom4j.factory                             : com.atlassian.core.xml.InterningDocumentFactory
+         os.arch                                       : x86_64
+         os.name                                       : Mac OS X
+         os.version                                    : 10.11.6
+         package.access                                : sun.,
+                                                         org.apache.catalina.,
+                                                         org.apache.coyote.,
+                                                         org.apache.jasper.,
+                                                         org.apache.tomcat.
+         package.definition                            : sun.,
+                                                         java.,
+                                                         org.apache.catalina.,
+                                                         org.apache.coyote.,
+                                                         org.apache.jasper.,
+                                                         org.apache.naming.,
+                                                         org.apache.tomcat.
+         server.loader                                 : 
+         shared.loader                                 : 
+         socksNonProxyHosts                            : local|*.local|169.254/16|*.169.254/16
+         sun.arch.data.model                           : 64
+         sun.boot.library.path                         : /Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib
+         sun.cpu.endian                                : little
+         sun.cpu.isalist                               : 
+         sun.io.unicode.encoding                       : UnicodeBig
+         sun.java.command                              : org.apache.catalina.startup.Bootstrap start
+         sun.java.launcher                             : SUN_STANDARD
+         sun.jnu.encoding                              : UTF-8
+         sun.management.compiler                       : HotSpot 64-Bit Tiered Compilers
+         sun.os.patch.level                            : unknown
+         tomcat.util.buf.StringCache.byte.enabled      : true
+         tomcat.util.scan.StandardJarScanFilter.jarsToScan : log4j-web*.jar,
+                                                         log4j-taglib*.jar,
+                                                         log4javascript*.jar,
+                                                         slf4j-taglib*.jar
+         tomcat.util.scan.StandardJarScanFilter.jarsToSkip : bootstrap.jar,
+                                                         commons-daemon.jar,
+                                                         tomcat-juli.jar,
+                                                         annotations-api.jar,
+                                                         el-api.jar,
+                                                         jsp-api.jar,
+                                                         servlet-api.jar,
+                                                         websocket-api.jar,
+                                                         jaspic-api.jar,
+                                                         catalina.jar,
+                                                         catalina-ant.jar,
+                                                         catalina-ha.jar,
+                                                         catalina-storeconfig.jar,
+                                                         catalina-tribes.jar,
+                                                         jasper.jar,
+                                                         jasper-el.jar,
+                                                         ecj-*.jar,
+                                                         tomcat-api.jar,
+                                                         tomcat-util.jar,
+                                                         tomcat-util-scan.jar,
+                                                         tomcat-coyote.jar,
+                                                         tomcat-dbcp.jar,
+                                                         tomcat-jni.jar,
+                                                         tomcat-websocket.jar,
+                                                         tomcat-i18n-en.jar,
+                                                         tomcat-i18n-es.jar,
+                                                         tomcat-i18n-fr.jar,
+                                                         tomcat-i18n-ja.jar,
+                                                         tomcat-juli-adapters.jar,
+                                                         catalina-jmx-remote.jar,
+                                                         catalina-ws.jar,
+                                                         tomcat-jdbc.jar,
+                                                         tools.jar,
+                                                         commons-beanutils*.jar,
+                                                         commons-codec*.jar,
+                                                         commons-collections*.jar,
+                                                         commons-dbcp*.jar,
+                                                         commons-digester*.jar,
+                                                         commons-fileupload*.jar,
+                                                         commons-httpclient*.jar,
+                                                         commons-io*.jar,
+                                                         commons-lang*.jar,
+                                                         commons-logging*.jar,
+                                                         commons-math*.jar,
+                                                         commons-pool*.jar,
+                                                         jstl.jar,
+                                                         taglibs-standard-spec-*.jar,
+                                                         geronimo-spec-jaxrpc*.jar,
+                                                         wsdl4j*.jar,
+                                                         ant.jar,
+                                                         ant-junit*.jar,
+                                                         aspectj*.jar,
+                                                         jmx.jar,
+                                                         h2*.jar,
+                                                         hibernate*.jar,
+                                                         httpclient*.jar,
+                                                         jmx-tools.jar,
+                                                         jta*.jar,
+                                                         log4j*.jar,
+                                                         mail*.jar,
+                                                         slf4j*.jar,
+                                                         xercesImpl.jar,
+                                                         xmlParserAPIs.jar,
+                                                         xml-apis.jar,
+                                                         junit.jar,
+                                                         junit-*.jar,
+                                                         hamcrest-*.jar,
+                                                         easymock-*.jar,
+                                                         cglib-*.jar,
+                                                         objenesis-*.jar,
+                                                         ant-launcher.jar,
+                                                         cobertura-*.jar,
+                                                         asm-*.jar,
+                                                         dom4j-*.jar,
+                                                         icu4j-*.jar,
+                                                         jaxen-*.jar,
+                                                         jdom-*.jar,
+                                                         jetty-*.jar,
+                                                         oro-*.jar,
+                                                         servlet-api-*.jar,
+                                                         tagsoup-*.jar,
+                                                         xmlParserAPIs-*.jar,
+                                                         xom-*.jar
+         user.country                                  : US
+         user.dir                                      : /Users/sasikumaranandan/Downloads/atlassian-jira-software-7.3.4-standalone/bin
+         user.home                                     : /Users/sasikumaranandan
+         user.language                                 : en
+         user.name                                     : sasikumaranandan
+         user.timezone                                 : America/New_York
+    
+2017-04-07 18:02:17,568 localhost-startStop-1 ERROR      [c.a.j.web.dispatcher.JiraWebworkActionDispatcher] 
+    
+    ******************************************
+    JIRA startup failed, JIRA has been locked.
+    ******************************************
+    
+2017-04-07 18:02:17,815 JIRA-Bootstrap INFO      [c.a.jira.startup.JiraStartupLogger] Running JIRA startup checks.
+2017-04-07 18:02:17,815 JIRA-Bootstrap FATAL      [c.a.jira.startup.JiraStartupLogger] Startup check failed. JIRA will be locked.
+2017-04-07 18:02:17,911 JIRA-Bootstrap INFO      [c.a.jira.startup.LauncherContextListener] Memory Usage:
+    ---------------------------------------------------------------------------------
+      Heap memory     :  Used:  201 MiB.  Committed:  484 MiB.  Max:  741 MiB
+      Non-heap memory :  Used:   36 MiB.  Committed:   38 MiB.  Max: 1264 MiB
+    ---------------------------------------------------------------------------------
+      TOTAL           :  Used:  237 MiB.  Committed:  522 MiB.  Max: 2005 MiB
+    ---------------------------------------------------------------------------------
+2017-04-09 12:14:59,696 localhost-startStop-2 INFO      [c.a.jira.startup.DefaultJiraLauncher] Stopping launchers
+2017-04-09 12:14:59,713 localhost-startStop-2 ERROR      [o.a.c.c.C.[Catalina].[localhost].[/]] Exception sending context destroyed event to listener instance of class com.atlassian.jira.startup.LauncherContextListener
+java.lang.NullPointerException
+	at com.atlassian.jira.startup.ClusteringLauncher.stop(ClusteringLauncher.java:48)
+	at com.atlassian.jira.startup.DefaultJiraLauncher.stop(DefaultJiraLauncher.java:209)
+	at com.atlassian.jira.startup.LauncherContextListener.contextDestroyed(LauncherContextListener.java:195)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4774)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5411)
+	... 3 filtered
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
