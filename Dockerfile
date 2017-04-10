@@ -5,9 +5,10 @@ FROM java:8-jre
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms128m -Xmx512m"
 
-ADD /atlassian-jira-6.4.14-standalone/ /jira-installation
+ADD /atlassian-jira-software-7.3.4-standalone/ /jira-installation
 RUN rm -rf /jira-installation/conf/server.xml
 ADD server.xml /jira-installation/conf/server.xml
+RUN mkdir /jira-installation/work
 
 RUN ./jira-installation/bin/startup.sh
 RUN chmod +x /jira-installation/bin/start-jira.sh
