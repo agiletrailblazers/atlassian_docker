@@ -7,7 +7,7 @@ _EXPECTED_JAVA_VERSION="8"
 # we expect first line to be in format 'java version "1.8.0_40"' and assert that minor version number will be 8 or higher
 #
 
-"$_RUNJAVA" -version 2>&1 | grep "java version" | (
+"$_RUNJAVA" -version 2>&1 | grep -E "(openjdk|java) version" | (
         IFS=. read ignore1 version ignore2
         if [ ! ${version:-0} -ge "$_EXPECTED_JAVA_VERSION" ]
         then
