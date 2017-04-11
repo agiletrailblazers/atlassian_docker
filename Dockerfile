@@ -3,7 +3,7 @@
 FROM java:8-jre
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
-ENV JAVA_OPTS="-Xms128m -Xmx512m"
+ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
 
 ADD /atlassian-jira-software-7.3.4-standalone/ /jira-installation
 RUN rm -rf /jira-installation/conf/server.xml
@@ -20,5 +20,5 @@ RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell
 
 EXPOSE 8090
 
-ENTRYPOINT "./jira-installation/bin/start-jira.sh" && /bin/bash
-#RUN ./jira-installation/bin/start-jira.sh
+CMD ./jira-installation/bin/startup.sh && tail -f ./jira-installation/logs/catalina.out
+
