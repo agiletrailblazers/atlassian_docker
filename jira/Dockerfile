@@ -2,8 +2,7 @@
 # Pull base image.
 FROM java:8-jre
 
-#RUN mkdir /home/ubuntu/jira_home;
-RUN mkdir -p "/Users/sasikumaranandan/Desktop/ATB_Projects/DevOps/jira_home"
+RUN mkdir /home/ubuntu/jira_home;
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
