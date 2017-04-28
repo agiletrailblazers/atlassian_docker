@@ -1,1 +1,0 @@
-require(["jquery","jira/admin/custom-fields/user-picker-filter/config"],function(jQuery,userPickerFilterConfig){jQuery(function(){userPickerFilterConfig.initializeFromConfigPage()})});

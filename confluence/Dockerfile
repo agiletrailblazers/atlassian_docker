@@ -9,7 +9,7 @@ ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
 RUN mkdir confluence-installation
-ADD http://54.175.158.124:8081/repository/confluence-trial/atlassian-confluence-6.1.0.zip /nexus_artifact/atlassian-confluence-6.1.0.zip
+ADD http://54.175.158.124:8081/repository/confluence/atlassian-confluence-6.1.0.zip /nexus_artifact/atlassian-confluence-6.1.0.zip
 RUN unzip /nexus_artifact/atlassian-confluence-6.1.0.zip -d /confluence-installation
 
 # Removing artifact
@@ -18,8 +18,12 @@ RUN rm -rf /nexus_artifact/;
 # Removing files with default confluence configs
 RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/classes/confluence-init.properties
 RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/conf/server.xml
+RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/web.xml
+
+# Adding config files
 ADD confluence-init.properties /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/classes/confluence-init.properties
 ADD server.xml /confluence-installation/atlassian-confluence-6.1.0/conf/server.xml
+ADD web.xml /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/web.xml
 
 # Expose port 8091 of docker container
 EXPOSE 8091

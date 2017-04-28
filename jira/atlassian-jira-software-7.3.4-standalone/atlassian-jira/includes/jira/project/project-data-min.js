@@ -1,1 +1,0 @@
-define("jira/project/projectdata",["wrm/data"],function(wrmData){var projectData=wrmData.claim("jira.webresources:jira-project-data.data");var projectDataObject={getProjectType:function(){return projectData["projectType"]}};return projectDataObject});
