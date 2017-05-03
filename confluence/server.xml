@@ -10,6 +10,14 @@
             <Host name="localhost" debug="0" appBase="webapps" unpackWARs="true" autoDeploy="false" startStopThreads="4">
                 <Context path="" docBase="../confluence" debug="0" reloadable="true" useHttpOnly="true">
                     <!-- Logger is deprecated in Tomcat 5.5. Logging configuration for Confluence is specified in confluence/WEB-INF/classes/log4j.properties -->
+                    <Resource name="jdbc/confluence" auth="Container" type="javax.sql.DataSource"
+                          username="demoatlassian"
+                          password="demoatlassianadminpassword"
+                          driverClassName="org.postgresql.Driver"
+                          url="jdbc:postgresql://demo-atlassian.cqvtmcusrtak.us-east-1.rds.amazonaws.com:5432/confluencedb"
+                          maxTotal="60"
+                          maxIdle="20"
+                          validationQuery="select 1" />
                     <Manager pathname="" />
                     <Valve className="org.apache.catalina.valves.StuckThreadDetectionValve" threshold="60" />
                 </Context>

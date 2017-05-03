@@ -116,7 +116,7 @@
             <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true">
 
                 <Context path="" docBase="${catalina.home}/atlassian-jira" reloadable="false" useHttpOnly="true">
-                    <Parameter name="jira.home" value="/Users/sasikumaranandan/jira_home"/>
+                    <Parameter name="jira.home" value="/home/ubuntu/jira_home"/>
 
                     <!--
                      ====================================================================================

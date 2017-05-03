@@ -1,1 +1,0 @@
-define("jira/jquery/deferred",["jquery"],function($){return $.Deferred});

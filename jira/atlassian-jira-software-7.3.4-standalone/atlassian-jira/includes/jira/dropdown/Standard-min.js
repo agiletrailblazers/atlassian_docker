@@ -1,1 +1,0 @@
-define("jira/dropdown/standard",["jira/dropdown","jira/util/objects"],function(jiraDropdown,objects){return function(trigger,dropdown){var that=objects.begetObject(jiraDropdown);that.init(trigger,dropdown);return that}});AJS.namespace("JIRA.Dropdown.Standard",null,require("jira/dropdown/standard"));
