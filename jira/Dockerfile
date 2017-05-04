@@ -33,7 +33,7 @@ RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/cat
 RUN chmod 755 /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/start-jira.sh
 RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
 
-EXPOSE 8090
+EXPOSE 8080
 
 # Start Jira
 CMD ./jira-installation/atlassian-jira-software-7.3.4-standalone/bin/startup.sh && tail -f ./jira-installation/atlassian-jira-software-7.3.4-standalone/logs/catalina.out
