@@ -2,8 +2,6 @@
 # Pull base image.
 FROM java:8-jre
 
-RUN mkdir /home/ubuntu/jira_home;
-
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
 ENV JIRA_HOME="/home/ubuntu/jira_home/"
@@ -13,6 +11,7 @@ RUN mkdir nexus_artifact
 RUN mkdir jira-installation
 ADD http://54.175.158.124:8081/repository/jira/atlassian-jira-software-7.3.4.zip /nexus_artifact/atlassian-jira-software-7.3.4.zip
 RUN unzip /nexus_artifact/atlassian-jira-software-7.3.4.zip -d /jira-installation
+RUN mkdir -p /home/ubuntu/jira_home;
 
 # Removing artifact
 RUN rm -rf /nexus_artifact/;
