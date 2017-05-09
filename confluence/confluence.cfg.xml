@@ -20,7 +20,7 @@
     <property name="hibernate.c3p0.timeout">30</property>
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.isolation">2</property>
-    <property name="hibernate.connection.password">demoatlassianadminpassword</property>
+    <property name="hibernate.connection.password">$2a$08$lLOMBAzD5TFWeFwKqTDyIO6Q0XJPMp2OCKcjV6c1TXAxZ8HacuzpG</property>
     <property name="hibernate.connection.url">jdbc:postgresql://demo-atlassian.cqvtmcusrtak.us-east-1.rds.amazonaws.com:5432/confluencedb</property>
     <property name="hibernate.connection.username">demoatlassian</property>
     <property name="hibernate.database.lower_non_ascii_supported">true</property>
