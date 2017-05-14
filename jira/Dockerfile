@@ -6,6 +6,8 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
 ENV JIRA_HOME="/home/ubuntu/jira_home/"
 
+ARG jiradbpasswordarg
+
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
 RUN mkdir jira-installation
@@ -24,6 +26,7 @@ RUN rm -rf /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/check
 ADD server.xml /jira-installation/atlassian-jira-software-7.3.4-standalone/conf/server.xml
 ADD check-java.sh /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/check-java.sh
 ADD dbconfig.xml /home/ubuntu/jira_home/dbconfig.xml
+RUN sed -i "s/jiradbpassword/"$jiradbpasswordarg"/g" /home/ubuntu/jira_home/dbconfig.xml
 
 # Provide execution permission
 RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/start-jira.sh

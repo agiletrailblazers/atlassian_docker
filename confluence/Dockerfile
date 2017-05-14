@@ -6,6 +6,8 @@ FROM java:8-jre
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
 
+ARG confluencedbpasswordarg
+
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
 RUN mkdir confluence-installation
@@ -26,6 +28,7 @@ ADD confluence-init.properties /confluence-installation/atlassian-confluence-6.1
 ADD server.xml /confluence-installation/atlassian-confluence-6.1.0/conf/server.xml
 ADD web.xml /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/web.xml
 ADD confluence.cfg.xml /home/ubuntu/confluence/confluence.cfg.xml
+RUN sed -i "s/confluencedbpassword/"$confluencedbpasswordarg"/g" /home/ubuntu/confluence/confluence.cfg.xml
 
 # Expose port 8091 of docker container
 EXPOSE 8091
