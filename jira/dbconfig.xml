@@ -9,7 +9,8 @@
     <url>jdbc:postgresql://demo-atlassian.cqvtmcusrtak.us-east-1.rds.amazonaws.com:5432/jiradb</url>
     <driver-class>org.postgresql.Driver</driver-class>
     <username>demoatlassian</username>
-    <password>demoatlassianadminpassword</password>
+    <!--Jira DB password is set while building the docker image. Pass the password as an arugument-->
+    <password>jiradbpassword</password>
     <pool-min-size>20</pool-min-size>
     <pool-max-size>20</pool-max-size>
     <pool-max-wait>30000</pool-max-wait>
