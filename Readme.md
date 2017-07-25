@@ -6,6 +6,7 @@ This project holds files and instructions on building Docker images for
   3. Bamboo
   4. Crucible-fisheye
   5. Sitemonitoring
+  6. Nexus3
 
 ## Getting Started
 
@@ -34,6 +35,10 @@ Example:-<br />
 ### Running docker container
 <br />
   $> docker run -d -p 8080:8080 jiradockerimage<br />
+
+### Running nexus docker container
+<br />
+  $> docker run -d -p 8081:8081 --name nexus -v /path/to/nexus-data:/nexus-data nexus3
 
 ### Enter into running docker container  
 
