@@ -69,13 +69,13 @@ RUN sed \
 
 RUN useradd -r -u 200 -m -c "nexus role account" -d ${NEXUS_DATA} -s /bin/false nexus \
   && mkdir -p ${NEXUS_DATA}/etc ${NEXUS_DATA}/log ${NEXUS_DATA}/tmp ${SONATYPE_WORK} \
-  && ln -s ${NEXUS_DATA} ${SONATYPE_WORK}/nexus3 \
+  && ln -s ${NEXUS_DATA} ${SONATYPE_WORK}/nexus3
   && chown -R nexus:nexus ${NEXUS_DATA}
 
 VOLUME ${NEXUS_DATA}
 
 EXPOSE 8081
-USER nexus
+#USER nexus
 WORKDIR ${NEXUS_HOME}
 
 ENV INSTALL4J_ADD_VM_PARAMS="-Xms1200m -Xmx1200m"
