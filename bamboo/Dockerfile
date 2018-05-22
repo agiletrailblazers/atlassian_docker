@@ -9,7 +9,7 @@ ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
 # Downloading bamboo artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
 RUN mkdir bamboo-installation
-ADD http://ec2-54-175-158-124.compute-1.amazonaws.com/repository/bamboo/atlassian-bamboo-5.15.5.zip /nexus_artifact/atlassian-bamboo-5.15.5.zip
+ADD http://nexus.agiletrailblazers.com/repository/bamboo/atlassian-bamboo-5.15.5.zip /nexus_artifact/atlassian-bamboo-5.15.5.zip
 RUN unzip /nexus_artifact/atlassian-bamboo-5.15.5.zip -d /bamboo-installation
 
 # Removing artifact
