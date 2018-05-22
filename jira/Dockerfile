@@ -12,7 +12,7 @@ ENV JIRA_HOME="/home/ubuntu/jira_home/"
 
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
-RUN mkdir jira-installation
+#RUN mkdir jira-installation
 ADD http://nexus.agiletrailblazers.com/repository/jira/atlassian-jira-software-7.3.4.zip /nexus_artifact/atlassian-jira-software-7.3.4.zip
 RUN unzip /nexus_artifact/atlassian-jira-software-7.3.4.zip -d /jira-installation
 
