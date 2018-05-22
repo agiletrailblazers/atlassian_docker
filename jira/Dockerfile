@@ -3,7 +3,6 @@
 FROM java:8-jre
 
 RUN mkdir -p /home/ubuntu/jira_home;
-VOLUME /jira-installation
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
@@ -12,7 +11,7 @@ ENV JIRA_HOME="/home/ubuntu/jira_home/"
 
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
-#RUN mkdir jira-installation
+RUN mkdir jira-installation
 ADD http://nexus.agiletrailblazers.com/repository/jira/atlassian-jira-software-7.3.4.zip /nexus_artifact/atlassian-jira-software-7.3.4.zip
 RUN unzip /nexus_artifact/atlassian-jira-software-7.3.4.zip -d /jira-installation
 
@@ -34,8 +33,9 @@ RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/che
 RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/catalina.sh
 RUN chmod 755 /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/start-jira.sh
 RUN chmod o+x /jira-installation/atlassian-jira-software-7.3.4-standalone/
-RUN chown -R 1000:1000 /jira-installation/atlassian-jira-software-7.3.4-standalone/
 RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
+RUN chown -R 1000:1000 /jira-installation/atlassian-jira-software-7.3.4-standalone/
+RUN chown -R jira:jira /jira-installation/atlassian-jira-software-7.3.4-standalone/
 
 EXPOSE 8090
 
