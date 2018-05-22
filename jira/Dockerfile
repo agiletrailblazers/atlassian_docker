@@ -8,6 +8,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
 ENV JIRA_HOME="/home/ubuntu/jira_home/"
 
+
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
 RUN mkdir jira-installation
@@ -36,6 +37,8 @@ RUN chown -R 1000:1000 /jira-installation/atlassian-jira-software-7.3.4-standalo
 RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
 
 EXPOSE 8090
+
+USER jira
 
 # Start Jira
 CMD ./jira-installation/atlassian-jira-software-7.3.4-standalone/bin/startup.sh && tail -f ./jira-installation/atlassian-jira-software-7.3.4-standalone/logs/catalina.out
