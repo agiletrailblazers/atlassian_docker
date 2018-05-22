@@ -32,6 +32,7 @@ RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/che
 RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/catalina.sh
 RUN chmod 755 /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/start-jira.sh
 RUN chmod o+x /jira-installation/atlassian-jira-software-7.3.4-standalone/
+RUN chown -R 1000:1000 /jira-installation/atlassian-jira-software-7.3.4-standalone/
 RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
 
 EXPOSE 8090
