@@ -64,10 +64,10 @@ ENV JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental
 RUN chown -R ${user} "$JENKINS_HOME" /usr/share/jenkins/ref
 
 # for main web interface:
-EXPOSE ${http_port}
+EXPOSE 8080
 
 # will be used by attached slave agents:
-EXPOSE ${agent_port}
+EXPOSE 50000
 
 ENV COPY_REFERENCE_FILE_LOG $JENKINS_HOME/copy_reference_file.log
 
