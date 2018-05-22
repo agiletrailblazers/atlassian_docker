@@ -11,7 +11,7 @@ ARG confluencedbpasswordarg
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
 RUN mkdir confluence-installation
-ADD http://54.175.158.124:8081/repository/confluence/atlassian-confluence-6.1.0.zip /nexus_artifact/atlassian-confluence-6.1.0.zip
+ADD http://nexus.agiletrailblazers.com/repository/confluence/atlassian-confluence-6.1.0.zip /nexus_artifact/atlassian-confluence-6.1.0.zip
 RUN unzip /nexus_artifact/atlassian-confluence-6.1.0.zip -d /confluence-installation
 
 # Removing artifact
