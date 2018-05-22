@@ -3,6 +3,7 @@
 FROM java:8-jre
 
 RUN mkdir -p /home/ubuntu/jira_home;
+VOLUME /jira-installation
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
