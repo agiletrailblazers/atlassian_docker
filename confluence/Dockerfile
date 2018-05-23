@@ -21,7 +21,7 @@ RUN rm -rf /nexus_artifact/;
 RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/classes/confluence-init.properties
 RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/conf/server.xml
 RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/web.xml
-RUN rm -rf /home/ubuntu/confluence/confluence.cfg.xml
+#RUN rm -rf /home/ubuntu/confluence/confluence.cfg.xml
 
 # Adding config files
 ADD confluence-init.properties /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/classes/confluence-init.properties
