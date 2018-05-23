@@ -32,6 +32,8 @@ RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/cat
 RUN chmod 755 /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/start-jira.sh
 RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
 
+RUN chown jira:jira -R /home/ubuntu/jira_home
+
 EXPOSE 8080
 
 # Start Jira
