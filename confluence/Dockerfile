@@ -11,6 +11,7 @@ ARG confluencedbpasswordarg
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
 RUN mkdir confluence-installation
+RUN mkdir -p /home/ubuntu/confluence/
 ADD http://nexus.agiletrailblazers.com/repository/confluence/atlassian-confluence-6.1.0.zip /nexus_artifact/atlassian-confluence-6.1.0.zip
 RUN unzip /nexus_artifact/atlassian-confluence-6.1.0.zip -d /confluence-installation
 
@@ -21,13 +22,13 @@ RUN rm -rf /nexus_artifact/;
 RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/classes/confluence-init.properties
 RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/conf/server.xml
 RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/web.xml
-#RUN rm -rf /home/ubuntu/confluence/confluence.cfg.xml
+RUN rm -rf /home/ubuntu/confluence/confluence.cfg.xml
 
 # Adding config files
 ADD confluence-init.properties /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/classes/confluence-init.properties
 ADD server.xml /confluence-installation/atlassian-confluence-6.1.0/conf/server.xml
 ADD web.xml /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/web.xml
-#ADD confluence.cfg.xml /home/ubuntu/confluence/confluence.cfg.xml
+ADD confluence.cfg.xml /home/ubuntu/confluence/confluence.cfg.xml
 RUN sed -i "s/confluencedbpassword/"$confluencedbpasswordarg"/g" /home/ubuntu/confluence/confluence.cfg.xml
 
 # Expose port 8091 of docker container
