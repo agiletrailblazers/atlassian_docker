@@ -15,6 +15,7 @@ RUN mkdir nexus_artifact
 RUN mkdir confluence-installation
 RUN mkdir -p /home/ubuntu/confluence/
 RUN chmod 777 -R /home/ubuntu/confluence/
+RUN chmod 777 -R /confluence-installation
 ADD http://nexus.agiletrailblazers.com/repository/confluence/atlassian-confluence-6.1.0.zip /nexus_artifact/atlassian-confluence-6.1.0.zip
 RUN unzip /nexus_artifact/atlassian-confluence-6.1.0.zip -d /confluence-installation
 
