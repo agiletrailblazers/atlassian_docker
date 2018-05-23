@@ -27,7 +27,7 @@ RUN rm -rf /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-IN
 ADD confluence-init.properties /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/classes/confluence-init.properties
 ADD server.xml /confluence-installation/atlassian-confluence-6.1.0/conf/server.xml
 ADD web.xml /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/web.xml
-ADD confluence.cfg.xml /home/ubuntu/confluence/confluence.cfg.xml
+#ADD confluence.cfg.xml /home/ubuntu/confluence/confluence.cfg.xml
 RUN sed -i "s/confluencedbpassword/"$confluencedbpasswordarg"/g" /home/ubuntu/confluence/confluence.cfg.xml
 
 # Expose port 8091 of docker container
