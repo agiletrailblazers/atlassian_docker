@@ -23,7 +23,7 @@
     <!--Confluence DB password is set while building the docker image. Pass the password as an arugument-->
     <property name="hibernate.connection.password">confluencedbpassword</property>
     <property name="hibernate.connection.url">jdbc:postgresql://demo-atlassian.cqvtmcusrtak.us-east-1.rds.amazonaws.com:5432/confluencedb</property>
-    <property name="hibernate.connection.username">demoatlassian</property>
+    <property name="hibernate.connection.username">confluence</property>
     <property name="hibernate.database.lower_non_ascii_supported">true</property>
     <property name="hibernate.dialect">com.atlassian.confluence.impl.hibernate.dialect.PostgreSQLDialect</property>
     <property name="hibernate.setup">true</property>
