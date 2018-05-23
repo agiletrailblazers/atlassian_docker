@@ -8,6 +8,8 @@ ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
 
 ARG confluencedbpasswordarg
 
+RUN /usr/sbin/useradd --create-home --comment "Account for running Confluence" --shell /bin/bash confluence
+
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
 RUN mkdir confluence-installation
@@ -31,6 +33,11 @@ ADD server.xml /confluence-installation/atlassian-confluence-6.1.0/conf/server.x
 ADD web.xml /confluence-installation/atlassian-confluence-6.1.0/confluence/WEB-INF/web.xml
 ADD confluence.cfg.xml /home/ubuntu/confluence/confluence.cfg.xml
 RUN sed -i "s/confluencedbpassword/"$confluencedbpasswordarg"/g" /home/ubuntu/confluence/confluence.cfg.xml
+
+RUN chown -R confluence:confluence /home/ubuntu/confluence/
+RUN chown -R confluence:confluence /confluence-installation
+
+USER confluence
 
 # Expose port 8091 of docker container
 EXPOSE 8091
