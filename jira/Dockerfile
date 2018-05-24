@@ -4,7 +4,7 @@ FROM java:8-jre
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV JAVA_OPTS="-Xms2048m -Xmx2048m"
-ENV JIRA_HOME="/home/ubuntu/jira_home/"
+ENV JIRA_HOME="/jira_home/"
 
 # Downloading confluence artifact form ATB Nexus and unzipping
 RUN mkdir nexus_artifact
