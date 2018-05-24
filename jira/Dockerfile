@@ -30,9 +30,9 @@ RUN chmod +x /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/sta
 RUN chmod +x /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/check-java.sh
 RUN chmod +x /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/catalina.sh
 RUN chmod 755 /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/start-jira.sh
-#RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
+RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
 
-RUN adduser --disabled-password --gid 0 --gecos "JIRA user" jira
+#RUN adduser --disabled-password --gid 0 --gecos "JIRA user" jira
 USER jira
 #RUN chown rosuser:root /home/rosuser && chmod 0775 /home/rosuser
 
