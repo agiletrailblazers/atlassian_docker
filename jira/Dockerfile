@@ -30,17 +30,13 @@ RUN chmod +x /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/sta
 RUN chmod +x /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/check-java.sh
 RUN chmod +x /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/catalina.sh
 RUN chmod 755 /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/start-jira.sh
+
+# Add Jira user
 RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
 
-#RUN adduser --disabled-password --gid 0 --gecos "JIRA user" jira
-#USER jira
-#RUN chown rosuser:root /home/rosuser && chmod 0775 /home/rosuser
-
+# Provide Jira user permission to folders
 RUN chown jira:root -R /home/ubuntu/jira_home && chmod 0775 -R /home/ubuntu/jira_home
 RUN chown jira:root -R /jira-installation && chmod 0775 -R /jira-installation
-#RUN chmod 777 -R /home/ubuntu/jira_home
-#RUN chmod 777 -R /jira-installation
-
 
 EXPOSE 8080
 
