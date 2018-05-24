@@ -34,8 +34,8 @@ RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell
 
 RUN chown jira:jira -R /home/ubuntu/jira_home
 RUN chown jira:jira -R /jira-installation
-#RUN chmod 777 -R /home/ubuntu/jira_home
-#RUN chmod 777 -R /jira-installation
+RUN chmod 777 -R /home/ubuntu/jira_home
+RUN chmod 777 -R /jira-installation
 
 EXPOSE 8080
 
