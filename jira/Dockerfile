@@ -31,6 +31,7 @@ RUN chmod +x /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/che
 RUN chmod +x /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/catalina.sh
 RUN chmod 755 /jira-installation/atlassian-jira-software-7.9.2-standalone/bin/start-jira.sh
 RUN /usr/sbin/useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
+RUN usermod -aG sudo
 
 RUN chown jira:jira -R /home/ubuntu/jira_home
 RUN chown jira:jira -R /jira-installation
@@ -39,7 +40,7 @@ RUN chown jira:jira -R /jira-installation
 
 EXPOSE 8080
 
-USER 1001
+USER jira
 
 # Start Jira
 CMD ./jira-installation/atlassian-jira-software-7.9.2-standalone/bin/startup.sh && tail -f ./jira-installation/atlassian-jira-software-7.9.2-standalone/logs/catalina.out
