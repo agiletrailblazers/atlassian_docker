@@ -6,7 +6,7 @@
   <database-type>postgres72</database-type>
   <schema-name>public</schema-name>
   <jdbc-datasource>
-    <url>jdbc:postgresql://demo-atlassian.cqvtmcusrtak.us-east-1.rds.amazonaws.com:5432/jiradb</url>
+    <url>jdbc:postgresql://demo-atlassian.cqvtmcusrtak.us-east-1.rds.amazonaws.com:5432/jiradb_oc</url>
     <driver-class>org.postgresql.Driver</driver-class>
     <username>demoatlassian</username>
     <password>demoatlassianadminpassword</password>
