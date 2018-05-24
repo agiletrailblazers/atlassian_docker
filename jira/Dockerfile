@@ -39,7 +39,7 @@ RUN chown jira:jira -R /jira-installation
 
 EXPOSE 8080
 
-USER jira
+USER 1001
 
 # Start Jira
 CMD ./jira-installation/atlassian-jira-software-7.9.2-standalone/bin/startup.sh && tail -f ./jira-installation/atlassian-jira-software-7.9.2-standalone/logs/catalina.out
